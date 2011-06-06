@@ -6,9 +6,11 @@ import com.liferay.portal.kernel.util.PortalClassLoaderUtil;
 import com.liferay.portlet.documentlibrary.antivirus.Antivirus;
 
 public class AntivirusFactory {
-	public static Antivirus getIsntance(){
-		if(_antivirus==null){
+	
+	public static Antivirus getInstance() {
+		if(_antivirus == null) {
 			ClassLoader classLoader = PortalClassLoaderUtil.getClassLoader();
+			
 			try {
 				//TODO: get class from properties file.
 				_antivirus = (Antivirus)classLoader.loadClass("com.liferay.portlet.documentlibrary.antivirus.ClamAV").newInstance();
@@ -20,6 +22,7 @@ public class AntivirusFactory {
 		if (_log.isDebugEnabled()) {
 			_log.debug("Return " + _antivirus.getClass().getName());
 		}
+		
 		return _antivirus;
 	}
 	
