@@ -12,22 +12,19 @@ import com.liferay.portal.kernel.exception.SystemException;
 import com.liferay.portal.service.ServiceContext;
 import com.liferay.portlet.documentlibrary.model.DLFileEntry;
 import com.liferay.portlet.documentlibrary.service.DLFileEntryLocalService;
-import com.philvarner.clamavj.ClamScan;
-import com.philvarner.clamavj.ScanResult;
+
 
 public class DLFileEntryAntiVirusLocalService extends DLFileEntryLocalServiceWrapper{
 
-        private static final int PORT_NUMBER = 3310;
-	private static final int TIME_OUT = 60;
-	private static final String VIRUS_SCAN_STATUS_SUCESS = "PASSED";
-	private static final String VIRUS_SCAN_STATUS_FAILURE = "FAILED";
-	private static final String VIRUS_SCAN_STATUS_ERROR = "ERROR";
+
+	
 
 	public DLFileEntryAntiVirusLocalService(
 			DLFileEntryLocalService dlFileEntryLocalService) {
 		super(dlFileEntryLocalService);
+		// TODO Auto-generated constructor stub
 	}
-	
+
 	@Override
 	public DLFileEntry addDLFileEntry(DLFileEntry dlFileEntry)
 			throws SystemException {
@@ -55,7 +52,7 @@ public class DLFileEntryAntiVirusLocalService extends DLFileEntryLocalServiceWra
 
 		DLFileEntry dlFileEntry = null;
 		
-		try {
+		/*try {
 			InetAddress inetAddress = InetAddress.getLocalHost();
 			ClamScan clamScan = new ClamScan(inetAddress.getHostAddress(), PORT_NUMBER, TIME_OUT);
 			InputStream inputStream;
@@ -87,7 +84,7 @@ public class DLFileEntryAntiVirusLocalService extends DLFileEntryLocalServiceWra
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+		*/
 		return dlFileEntry;
 	}
 	
@@ -112,6 +109,7 @@ public class DLFileEntryAntiVirusLocalService extends DLFileEntryLocalServiceWra
 	public DLFileEntry updateDLFileEntry(DLFileEntry dlFileEntry)
 			throws SystemException {
 		// TODO Auto-generated method stub
+		System.out.println("a");
 		return super.updateDLFileEntry(dlFileEntry);
 	}
 	
@@ -119,6 +117,7 @@ public class DLFileEntryAntiVirusLocalService extends DLFileEntryLocalServiceWra
 	public DLFileEntry updateDLFileEntry(DLFileEntry dlFileEntry, boolean merge)
 			throws SystemException {
 		// TODO Auto-generated method stub
+		System.out.println("b");
 		return super.updateDLFileEntry(dlFileEntry, merge);
 	}
 	
@@ -129,6 +128,7 @@ public class DLFileEntryAntiVirusLocalService extends DLFileEntryLocalServiceWra
 			String extraSettings, byte[] bytes, ServiceContext serviceContext)
 			throws PortalException, SystemException {
 		// TODO Auto-generated method stub
+		System.out.println("c");
 		return super.updateFileEntry(userId, groupId, folderId, name, sourceFileName,
 				title, description, changeLog, majorVersion, extraSettings, bytes,
 				serviceContext);
@@ -141,6 +141,7 @@ public class DLFileEntryAntiVirusLocalService extends DLFileEntryLocalServiceWra
 			String extraSettings, File file, ServiceContext serviceContext)
 			throws PortalException, SystemException {
 		// TODO Auto-generated method stub
+		System.out.println("d");
 		return super.updateFileEntry(userId, groupId, folderId, name, sourceFileName,
 				title, description, changeLog, majorVersion, extraSettings, file,
 				serviceContext);
@@ -154,6 +155,7 @@ public class DLFileEntryAntiVirusLocalService extends DLFileEntryLocalServiceWra
 			ServiceContext serviceContext) throws PortalException,
 			SystemException {
 		// TODO Auto-generated method stub
+		System.out.println("e");
 		return super.updateFileEntry(userId, groupId, folderId, name, sourceFileName,
 				title, description, changeLog, majorVersion, extraSettings, is, size,
 				serviceContext);

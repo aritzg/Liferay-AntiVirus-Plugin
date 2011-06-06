@@ -1,7 +1,11 @@
 <?xml version="1.0"?>
 <!DOCTYPE hook PUBLIC "-//Liferay//DTD Hook 6.0.0//EN" "http://www.liferay.com/dtd/liferay-hook_6_0_0.dtd">
 
+
 <hook>
+	<!-- 
+	<portal-properties>content/antivirus.properties</portal-properties>
+	 -->
 	<service>
 		<service-type>com.liferay.portlet.documentlibrary.service.DLFileEntryService</service-type>
 		<service-impl>com.liferay.portlet.documentlibrary.service.DLFileEntryAntiVirusLocalService</service-impl>
