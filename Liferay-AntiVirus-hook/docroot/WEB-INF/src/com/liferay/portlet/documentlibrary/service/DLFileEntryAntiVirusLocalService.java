@@ -10,6 +10,7 @@ import com.liferay.portal.kernel.exception.SystemException;
 import com.liferay.portal.service.ServiceContext;
 import com.liferay.portlet.documentlibrary.antivirus.Antivirus;
 import com.liferay.portlet.documentlibrary.antivirus.InfectedFileException;
+
 import com.liferay.portlet.documentlibrary.model.DLFileEntry;
 import com.liferay.portlet.documentlibrary.util.AntivirusFactory;
 
