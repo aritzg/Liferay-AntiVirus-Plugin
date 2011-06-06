@@ -3,11 +3,13 @@
 
 
 <hook>
-	<!-- 
 	<portal-properties>content/antivirus.properties</portal-properties>
-	 -->
 	<service>
-		<service-type>com.liferay.portlet.documentlibrary.service.DLFileEntryService</service-type>
-		<service-impl>com.liferay.portlet.documentlibrary.service.DLFileEntryAntiVirusLocalService</service-impl>
+		<service-type>
+			com.liferay.portlet.documentlibrary.service.DLFileEntryService
+		</service-type>
+		<service-impl>
+			com.liferay.portlet.documentlibrary.service.DLFileEntryAntiVirusLocalService
+		</service-impl>
 	</service>
 </hook>

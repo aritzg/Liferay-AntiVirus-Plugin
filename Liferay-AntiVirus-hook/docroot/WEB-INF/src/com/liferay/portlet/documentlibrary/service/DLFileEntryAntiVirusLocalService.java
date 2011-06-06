@@ -3,10 +3,14 @@ package com.liferay.portlet.documentlibrary.service;
 import java.io.File;
 import java.io.InputStream;
 
-import org.omg.CORBA.SystemException;
 
+
+import com.liferay.portal.kernel.exception.PortalException;
+import com.liferay.portal.kernel.exception.SystemException;
+import com.liferay.portal.service.ServiceContext;
+import com.liferay.portlet.documentlibrary.antivirus.Antivirus;
 import com.liferay.portlet.documentlibrary.antivirus.InfectedFileException;
-import com.liferay.portlet.documentlibrary.util.Antivirus;
+import com.liferay.portlet.documentlibrary.model.DLFileEntry;
 import com.liferay.portlet.documentlibrary.util.AntivirusFactory;
 
 public class DLFileEntryAntiVirusLocalService extends DLFileEntryLocalServiceWrapper{
